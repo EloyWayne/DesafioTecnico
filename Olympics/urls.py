@@ -14,9 +14,21 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
+from django.contrib import admin 
+from django.urls import path, include
+from apps.medals.api.viewsets import CountryViewsets, SportViewsets, MedalViewsets
+from rest_framework import routers
 
+# Configuração das rotas
+route = routers.DefaultRouter() 
+route.register('Country', CountryViewsets, basename='Country')
+route.register('Sport', SportViewsets, basename='Sport')
+route.register('Medal', MedalViewsets, basename='Medal')
+
+# URL patterns
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls), 
+    path("", include(route.urls), name="medals-livros"),  
 ]
+
+
