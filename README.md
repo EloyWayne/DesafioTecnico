@@ -32,24 +32,20 @@ Crie um ambiente virtual para isolar as dependências do projeto:
 Windows:
 
        
-       Copiar código
        venv\Scripts\activate
 macOS/Linux:
 
-       
-       Copiar código
+        
        source venv/bin/activate
 3. Instalar as Dependências
 Instale todas as dependências do projeto usando o arquivo requirements.txt:
 
        
-       Copiar código
        pip install -r requirements.txt
 4. Configurar o Banco de Dados
 Realize as migrações para configurar o banco de dados SQLite que acompanha o Django:
 
        
-       Copiar código
        python manage.py makemigrations
        python manage.py migrate
 5. Executar o Scraping
@@ -75,10 +71,10 @@ Os endpoints da API estão configurados com o Django REST Framework. Você pode 
 Lista de Países com Medalhas: http://127.0.0.1:8000/Country/
 Lista de Esportes: http://127.0.0.1:8000/Sport/
 Lista de Medalhas: http://127.0.0.1:8000/Medal/
+
 8. Acesso à Administração do Django
 Para acessar o painel administrativo do Django:
 
-       
        python manage.py createsuperuser
 Depois, acesse http://127.0.0.1:8000/admin/ e faça login com as credenciais criadas.
 
