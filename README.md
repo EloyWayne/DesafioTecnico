@@ -63,7 +63,7 @@ Após configurar o banco de dados, inicie o servidor de desenvolvimento:
 
      
        python manage.py runserver
-A aplicação estará disponível em http://127.0.0.1:8000/.
+   A aplicação estará disponível em http://127.0.0.1:8000/.
 
 7. Acessar a API
 Os endpoints da API estão configurados com o Django REST Framework. Você pode acessar os seguintes endpoints:
