@@ -29,14 +29,14 @@ Crie um ambiente virtual para isolar as dependências do projeto:
        python -m venv venv
        Ative o ambiente virtual:
 
-Windows:
+   Windows:
 
        
-       venv\Scripts\activate
-macOS/Linux:
+          venv\Scripts\activate
+   macOS/Linux:
 
         
-       source venv/bin/activate
+          source venv/bin/activate
 3. Instalar as Dependências
 Instale todas as dependências do projeto usando o arquivo requirements.txt:
 
