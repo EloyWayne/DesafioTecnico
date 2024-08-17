@@ -20,9 +20,9 @@ Antes de começar, certifique-se de ter os seguintes softwares instalados:
 
 Clone o repositório para o seu ambiente local:
 
-```sh
-git clone https://github.com/EloyWayne/DesafioTecnico.git
-cd DesafioTecnico
+       ```sh
+       git clone https://github.com/EloyWayne/DesafioTecnico.git
+       cd DesafioTecnico
 2. Criar e Ativar o Ambiente Virtual
 Crie um ambiente virtual para isolar as dependências do projeto:
 
