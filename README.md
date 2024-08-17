@@ -20,14 +20,10 @@ Clone o repositório para o seu ambiente local:
    git clone https://github.com/EloyWayne/DesafioTecnico.git
     cd DesafioTecnico
 
-2. Criar e Ativar o Ambiente Virtual
+2. *Criar e Ativar o Ambiente Virtual*
    ```sh
     python -m venv venv
-   
 Ative o ambiente virtual:
-
 Windows:
    ```sh
-    python -m venv venv
-
-
+   venv\Scripts\activate
