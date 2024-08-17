@@ -68,17 +68,18 @@ A aplicação estará disponível em http://127.0.0.1:8000/.
 7. Acessar a API
 Os endpoints da API estão configurados com o Django REST Framework. Você pode acessar os seguintes endpoints:
 
-Lista de Países com Medalhas: http://127.0.0.1:8000/Country/
+   Lista de Países com Medalhas: http://127.0.0.1:8000/Country/
 
-Lista de Esportes: http://127.0.0.1:8000/Sport/
+   Lista de Esportes: http://127.0.0.1:8000/Sport/
 
-Lista de Medalhas: http://127.0.0.1:8000/Medal/
+   Lista de Medalhas: http://127.0.0.1:8000/Medal/
 
 
 8. Acesso à Administração do Django
-Para acessar o painel administrativo do Django:
+   Para acessar o painel administrativo do Django:
 
        python manage.py createsuperuser
+   
 Depois, acesse http://127.0.0.1:8000/admin/ e faça login com as credenciais criadas.
 
 
