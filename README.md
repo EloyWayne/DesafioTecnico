@@ -21,8 +21,13 @@ Clone o repositório para o seu ambiente local:
     cd DesafioTecnico
 
 2. Criar e Ativar o Ambiente Virtual
-  ```sh
+   ```sh
     python -m venv venv
+   
+Ative o ambiente virtual:
 
+Windows:
+   ```sh
+    python -m venv venv
 
 
