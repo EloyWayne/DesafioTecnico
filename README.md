@@ -24,6 +24,7 @@ Clone o repositório para o seu ambiente local:
    ```sh
     python -m venv venv
 Ative o ambiente virtual:
-Windows:
-   ```sh
-   venv\Scripts\activate
+ Windows:
+     ```sh
+     venv\Scripts\activate
+
