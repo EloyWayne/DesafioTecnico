@@ -50,7 +50,7 @@ def fetch_medal_data():
             sport_obj, created = Sport.objects.get_or_create(name=sport_name)
             if created:
                 print(f"Criando novo registro para o esporte: {sport_name}")
-            # Adicione aqui a lógica para associar esporte, país e medalhas
+            
     
     print("Processo de scraping concluído.")
     
