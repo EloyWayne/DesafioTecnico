@@ -6,19 +6,16 @@ from .models import Country, Sport, Medal
 def fetch_medal_data():
     print("Iniciando o processo de web scraping...")
 
-    # Inicializa o WebDriver do Selenium
-    driver = webdriver.Chrome()  # Certifique-se de que o ChromeDriver está configurado corretamente
+    driver = webdriver.Chrome()
+
     driver.get('https://olympics.com/pt/paris-2024/medalhas')
     
-    # Aguarde o carregamento da página, se necessário (opcional)
-    driver.implicitly_wait(10)  # Espera até 10 segundos para que todos os elementos sejam carregados
+    driver.implicitly_wait(10)
 
-    # Pegue o HTML renderizado pela página
     soup = BeautifulSoup(driver.page_source, 'html.parser')
     
     print("Página carregada com sucesso")
-    
-    # Extraia os dados usando BeautifulSoup
+
     countries = soup.find_all('div', class_='country-medal-row')
     print(f"Número de países encontrados: {len(countries)}")
 
@@ -30,7 +27,6 @@ def fetch_medal_data():
         silver_medals = int(country.find('span', class_='silver-medal').text.strip())
         bronze_medals = int(country.find('span', class_='bronze-medal').text.strip())
 
-        # Criar ou atualizar o registro no banco de dados
         country_obj, created = Country.objects.get_or_create(name=country_name)
         if created:
             print(f"Criando novo registro para o país: {country_name}")
@@ -43,7 +39,6 @@ def fetch_medal_data():
         country_obj.save()
         print(f"Medalhas atualizadas para {country_name}: Ouro: {gold_medals}, Prata: {silver_medals}, Bronze: {bronze_medals}")
 
-        # Extração e associação de esportes e medalhas
         sports = country.find_all('div', class_='sport-medal-row')
         for sport in sports:
             sport_name = sport.find('span', class_='sport-name').text.strip()
@@ -54,6 +49,4 @@ def fetch_medal_data():
     
     print("Processo de scraping concluído.")
     
-    # Fechar o navegador
     driver.quit()
-
